@@ -8,9 +8,17 @@ eval "$(conda shell.bash hook)"
 # activate cell_profiler conda environment
 conda activate cell_profiler
 
-# Docker — least painful on Linux
-docker run --rm -v "$PWD":/data cellprofiler/cellprofiler:4.2.8 \
-  -c -r -p /data/yap_nc.cppipe -i /data/images -o /data/output
+# enable flatpak 
+sudo apt install flatpak
 
-# Cellpose
+# download the cellprofiler flatpak
+wget https://cellprofiler-releases.s3.us-east-1.amazonaws.com/org.cellprofiler.CellProfiler-4.2.8.1-x86_64.zip
+
+# unzip the cellprofiler flatpak
+unzip org.cellprofiler.CellProfiler-4.2.8.1-x86_64.zip
+
+# install the cellprofiler flatpak
+sudo flatpak install --user org.cellprofiler.CellProfiler-4.2.8.1-x86_64
+
+# install cellpose
 pip install cellpose --upgrade
