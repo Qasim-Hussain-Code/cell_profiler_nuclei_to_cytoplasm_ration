@@ -2,6 +2,9 @@
 # create cell_profiler conda environment
 conda create -n cell_profiler
 
+# initialize conda environment
+eval "$(conda shell.bash hook)"
+
 # activate cell_profiler conda environment
 conda activate cell_profiler
 
