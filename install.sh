@@ -5,8 +5,9 @@ conda create -n cell_profiler
 # activate cell_profiler conda environment
 conda activate cell_profiler
 
-# install cellprofiler
-conda install bioconda::cellprofiler
+# Docker — least painful on Linux
+docker run --rm -v "$PWD":/data cellprofiler/cellprofiler:4.2.8 \
+  -c -r -p /data/yap_nc.cppipe -i /data/images -o /data/output
 
-# test cellprofiler installation
-cellprofiler --version
+# Cellpose
+pip install cellpose --upgrade
