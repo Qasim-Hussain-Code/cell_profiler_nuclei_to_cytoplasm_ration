@@ -6,7 +6,7 @@ conda create -n cell_profiler
 conda activate cell_profiler
 
 # install cellprofiler
-conda install -c conda-forge cellprofiler
+conda install bioconda::cellprofiler
 
 # test cellprofiler installation
 cellprofiler --version
