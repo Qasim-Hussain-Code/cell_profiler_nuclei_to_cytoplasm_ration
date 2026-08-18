@@ -5,7 +5,7 @@ conda create -n cell_profiler -c conda-forge python=3.11 pip numpy scipy pandas 
 # initialize conda environment
 eval "$(conda shell.bash hook)"
 
-#activate cell_profiler conda environment
+# activate cell_profiler conda environment
 conda activate cell_profiler
 
 # enable flatpak
