@@ -1,0 +1,7 @@
+# ignore all files in the output directory
+output/*
+
+# ignore large installer binaries
+*.zip
+*.zip.*
+*.flatpak
