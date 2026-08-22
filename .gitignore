@@ -5,3 +5,32 @@ output/*
 *.zip
 *.zip.*
 *.flatpak
+
+# ignore macOS resource-fork junk
+__MACOSX/
+.DS_Store
+._*
+
+# ignore image files (any extension case)
+*.[tT][iI][fF]
+*.[tT][iI][fF][fF]
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]
+*.[pP][nN][gG]
+*.[gG][iI][fF]
+*.[bB][mM][pP]
+
+# ignore microscopy / raw acquisition formats
+*.[cC][zZ][iI]
+*.[nN][dD]2
+*.[lL][iI][fF]
+*.[lL][sS][mM]
+*.[oO][iI][bB]
+*.[oO][iI][fF]
+*.[iI][mM][sS]
+*.[sS][vV][sS]
+
+# ignore raw image datasets (images + their MetaData sidecars)
+ExampleFly/
+Lab_Mackay_Memorial_Hospital/
+HAEC-*/
